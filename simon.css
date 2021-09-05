@@ -1,0 +1,61 @@
+body{
+    background-color: #7fbfff;
+}
+
+h1{
+    font-family: 'Nova Mono'; font-size: 3em;
+}
+
+button{
+    font-size:75px;
+}
+
+.begin{
+position:absolute;
+font-size: 40px;
+background-color: #3fbfff;
+border:6px double #4ac;
+border-radius: 11%;
+box-shadow: 0 0 25px 10px rgb(222, 233, 231) inset;
+left:20%
+}
+
+.centered{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    --thickness: 0.8em;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Red Green"
+    "Blue Yellow";
+    display: none;
+}
+
+.Red { width:150px; height:150px; grid-area: Red; background-color: lightsalmon; border-bottom-right-radius: 50% inset; border-top-left-radius: var(--thickness);}
+.Red:hover { background-color:#d18466}
+.Red:disabled { color: black; }
+.Green { width:150px; height:150px; grid-area: Green; background-color: lightgreen; border-top-right-radius: var(--thickness);}
+.Green:hover {background-color: #69ac69}
+.Green:disabled { color: black; }
+.Blue { width:150px; height:150px; grid-area: Blue; background-color: lightblue; border-bottom-left-radius: var(--thickness);}
+.Blue:hover { background-color: rgb(135, 168, 179)}
+.Blue:disabled { color: black; }
+.Yellow { width:150px; height:150px; grid-area: Yellow; background-color:lightyellow; border-bottom-right-radius: var(--thickness);}
+.Yellow:hover { background-color: rgb(204, 204, 180);}
+.Yellow:disabled { color: black; }
+  
+html, body , .container {
+    height: 100%;
+    margin: 0;
+}
